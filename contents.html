@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+
+    <!--  reset css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <title>Shunsuke Nakagawa</title>
+</head>
+<body>
+
+    <!-- header start -->
+    <!-- 共通ヘッダー -->
+    <header id="header" class="bg-color">
+        <div class="container">
+            <div class="headerWrapper">
+                <h1><a href="./index.html">Shunsuke Nakagawa</a></h1>
+                <nav id="g-nav">
+                    <div id="g-nav-list">
+                            <ul id="g-navi" class="pc-menu">
+                                <li><a href="./about.html">About</a></li>
+                                <li><a href="./contents.html">Works</a></li>
+                                <li><a href="./index.html#contact">Contact</a></li>
+                            </ul>
+                    </div>
+                </nav>
+            </div>
+            <button class="menu-trigger" id="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>  
+            </button>
+            <div id="mask"></div>
+        </div>
+    </header>
+
+    <!-- main start -->
+    <main id="main-contents">
+
+        <!-- contents start -->
+        <section id="contents">
+            <div class="container">
+                <h2 class="section-title">Works</h2>
+                <p class="sub-title">制作したもの</p>
+                <div class="contentsWrapper">
+                    <ul class="contentsGroup">
+                        <li>
+                            <div class="bgDU">
+                                <figure class="bg-mask">
+                                    <img src="img/P_mockup_top.png" alt="" width="640px" height="189px">
+                                </figure>
+                                <button class="js-modal-open cap"  data-target="modal01">
+                                    <span>READ MORE</span>
+                                </button>
+                                <h4 class="contents-title">ポートフォリオサイト</h4>
+                                <span>Web Design</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bgDU">
+                                <figure class="bg-mask">
+                                    <img src="img/P_mockup_mywork.png" alt="" width="640px" height="189px">
+                                </figure>
+                                <button class="js-modal-open cap"  data-target="modal02">
+                                    <span>READ MORE</span>
+                                </button>
+                                <h4 class="contents-title">模写作品「My Work」</h4>
+                                <span>Web Design</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bgDU">
+                                <figure class="bg-mask">
+                                    <img src="img/P_mockup_house.png" alt="" width="640px" height="189px">
+                                </figure>
+                                <button class="js-modal-open cap"  data-target="modal03">
+                                    <span>READ MORE</span>
+                                </button>
+                                <h4 class="contents-title">模写作品「明るいHOUSE」</h4>
+                                <span>Web Design</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bgDU">
+                                <figure class="bg-mask">
+                                    <img src="img/P_mockup_task.png" alt="" width="640px" height="189px">
+                                </figure>
+                                <button class="js-modal-open cap"  data-target="modal04">
+                                    <span>READ MORE</span>
+                                </button>
+                                <h4 class="contents-title">タスク管理アプリ「たすくん」</h4>
+                                <span>Web App</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bgDU">
+                                <figure class="bg-mask">
+                                    <img src="img/P_mockup_typing.png" alt="" width="640px" height="189px">
+                                </figure>
+                                <button class="js-modal-open cap"  data-target="modal05">
+                                    <span>READ MORE</span>
+                                </button>
+                                <h4 class="contents-title">タイピングゲーム「タイピン」</h4>
+                                <span>Web App</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+        </section>
+
+        <!-- modal data start -->
+        <div id="modal01" class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <div class="productTop">
+                    <img src="img/top.png" alt="work-picture">
+                    <span class="js-modal-close modalClose">×</span>
+                </div>  
+                <dl class="productList">
+                    <dt>コンセプト</dt>
+                    <dd>晴れやかで親しみやすさを表現したポートフォリオ</dd>
+                    <dt>制作の目的</dt>
+                    <dd>私のことや制作実績、現在のスキルを紹介するために制作しました。</dd>
+                    <dt>制作担当</dt>
+                    <dd>デザイン / コーディング</dd>
+                    <dt>制作期間</dt>
+                    <dd>2週間</dd>
+                    <dt>使用言語</dt>
+                    <dd>HTML / CSS / JavaScript / jQuery</dd>
+                    <dt>URL</dt>
+                    <dd><a href="https://mimiojisan.github.io/my-portfolio/" target="_blank">ポートフォリオ<i class="fas fa-link"></i></a></dd>
+                    <dt>見どころ</dt>
+                    <dd>見やすさを追求した実績紹介やレスポンシブ対応のシンプルで統一感のあるデザイン</dd>
+                    <dt>エピソード</dt>
+                    <dd>『見心地』の良さを重視するため、色味を抑えてシンプルな作りにしました。優しいカラーやナチュラルを表現したトップイメージを使用し、柔らかいふんわりとした印象に仕上げました。また、アニメーションで動きを加え、柔らかさの中のスマートさを表現しました。</dd>
+                </dl>
+            </div>
+        </div>    
+        <div id="modal02" class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <div class="productTop">
+                    <img src="img/mywork.png"  alt="work-picture">
+                    <span class="js-modal-close modalClose">×</span>
+                </div>  
+                <dl class="productList">
+                    <dt>コンセプト</dt>
+                    <dd>デモサイトの模写</dd>
+                    <dt>制作の目的</dt>
+                    <dd>実際に存在するサイトを模写して構成や技術を理解するために制作しました。</dd>
+                    <dt>制作担当</dt>
+                    <dd>コーディング</dd>
+                    <dt>制作期間</dt>
+                    <dd>1.5日</dd>
+                    <dt>使用言語</dt>
+                    <dd>HTML / CSS</dd>
+                    <dt>URL</dt>
+                    <dd><a href="https://mimiojisan.github.io/tracing_mywork/" target="_blank">My Work<i class="fas fa-link"></i></a></dd>
+                    <dt>見どころ</dt>
+                    <dd>flex-boxを活用した作品の表示やウィンドウサイズによって切り替わるトップイメージの採用</dd>
+                    <dt>エピソード</dt>
+                    <dd>模写作品第一弾として画像配置やレスポンシブ対応を学ぶ良い機会となりました。</dd>
+                </dl>
+            </div>    
+        </div> 
+        <div id="modal03" class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <div class="productTop">
+                    <img src="img/house.png" alt="work-picture">
+                    <span class="js-modal-close modalClose">×</span>
+                </div>  
+                <dl class="productList">
+                    <dt>コンセプト</dt>
+                    <dd>デモサイトの模写</dd>
+                    <dt>制作の目的</dt>
+                    <dd>実際に存在するサイトを模写して構成や技術を理解するために制作しました。</dd>
+                    <dt>制作担当</dt>
+                    <dd>コーディング</dd>
+                    <dt>制作期間</dt>
+                    <dd>2日</dd>
+                    <dt>使用言語</dt>
+                    <dd>HTML / CSS / JavaScript</dd>
+                    <dt>URL</dt>
+                    <dd><a href="https://mimiojisan.github.io/tracing_house/" target="_blank">明るいHOUSE<i class="fas fa-link"></i></a></dd>
+                    <dt>見どころ</dt>
+                    <dd>レイヤーでの階層表示の採用とホバー時の動的表示や擬似要素の追加</dd>
+                    <dt>エピソード</dt>
+                    <dd>模写作品第二弾としてJavaScriptでの動作や擬似要素を使用している本サイトを選びました。レイアウトやロジカルな動きがとても参考になりました。</dd>
+                </dl>
+            </div>    
+        </div> 
+        <div id="modal04" class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <div class="productTop">
+                    <img src="img/task.png" alt="work-picture">
+                    <span class="js-modal-close modalClose">×</span>
+                </div>  
+                <dl class="productList">
+                    <dt>コンセプト</dt>
+                    <dd>使用感を追求した飽きの来ないタスク管理アプリ</dd>
+                    <dt>制作の目的</dt>
+                    <dd>情報の整理や優先順位などを流動的に管理するために制作しました。</dd>
+                    <dt>制作担当</dt>
+                    <dd>デザイン / コーディング</dd>
+                    <dt>制作期間</dt>
+                    <dd>1週間</dd>
+                    <dt>使用言語</dt>
+                    <dd>HTML / CSS (Bootstrap) / JavaScript (Vue.js)</dd>
+                    <dt>URL</dt>
+                    <dd><a href="https://mimiojisan.github.io/task-management/" target="_blank">たすくん</a><i class="fas fa-link"></i></dd>
+                    <dt>見どころ</dt>
+                    <dd>Bootstrapによるレスポンシブ対応とドラッグ＆ドロップでのフォーム移動</dd>
+                    <dt>エピソード</dt>
+                    <dd>直観的に操作できるようタスクの移動方法にドラッグ&ドロップを採用しました。完了したタスクはリストとして一目で確認することができます。</dd>
+               </dl>
+            </div>    
+        </div> 
+        <div id="modal05" class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <div class="productTop">
+                    <img src="img/typing.png" alt="work-picture">
+                    <span class="js-modal-close modalClose">×</span>
+                </div>  
+                <dl class="productList">
+                    <dt>コンセプト</dt>
+                    <dd>楽しく学べるタイピングゲーム</dd>
+                    <dt>制作の目的</dt>
+                    <dd>Vue.jsで頻出する用語を楽しく理解するために制作しました。</dd>
+                    <dt>制作担当</dt>
+                    <dd>デザイン / コーディング</dd>
+                    <dt>制作期間</dt>
+                    <dd>3日間</dd>
+                    <dt>使用言語</dt>
+                    <dd>HTML / CSS / JavaScript (Vue.js)</dd>
+                    <dt>URL</dt>
+                    <dd><a href="https://mimiojisan.github.io/typing-game/" target="_blank">タイピン</a><i class="fas fa-link"></i></dd>
+                    <dt>見どころ</dt>
+                    <dd>Vue.jsで使用される用語が問題として出題され正解ごとにゲージが増加</dd>
+                    <dt>エピソード</dt>
+                    <dd>ゲーム感覚でタイピング・用語に慣れられるようにと作成しました。問題はランダムで出題されるので繰り返し遊んでいただけます。</dd>
+                </dl>
+            </div>    
+        </div> 
+        </div> 
+    </main>
+
+    <!-- footer start -->
+    <!-- 共通フッター -->
+    <footer id="footer">
+        <nav class="bottomNav">
+            <ul class="snsLink">
+                <li><a href="https://github.com/mimiojisan/my-portfolio" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:ranparu.1230@gmail.com"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+        <p>© 2021 Shunsuke Nakagawa</p>
+        <p id="return-top"><a href="#"><span></span></a></p>
+    </footer>
+        
+    <!-- js -->
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        offset: 120,
+        delay: 0,
+        duration: 1000,
+        easing: 'ease',
+        once: false,
+        mirror: false,
+        anchorPlacement: 'top-bottom',
+        });
+    </script>
+
+</body>
+</html>

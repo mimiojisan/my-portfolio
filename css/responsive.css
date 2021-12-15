@@ -1,0 +1,482 @@
+@media screen and (max-width: 960px) {
+  /*--------------------
+    共通
+  --------------------*/
+  #main {
+    margin: 0;
+  }
+  .container {
+    padding: 60px 20px;
+  }
+  .main-title {
+    justify-content: center;
+    margin: auto;
+    z-index: 15;
+  }
+  .section-title {
+    padding-top: 0;
+  }
+  .sub-title {
+    margin-bottom: 30px;
+    font-size: 1.25rem;
+  }
+
+  /*--------------------
+    header
+  --------------------*/
+  #header {
+    z-index: 10;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  #header .container {
+    padding: 10px 20px;
+  }
+  .header .main-title a {
+    display: none;
+  }
+  .pc-menu {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(249, 247, 245, 0.9);
+  }
+  .pc-menu li {
+    font-size: 0.9rem;
+    width: 100%;
+    margin: 0;
+    flex: none;
+    letter-spacing: 0.15em;
+    padding: 24px;
+  }
+
+  .pc-menu li a:hover {
+    color: #121212;
+  }
+
+  .pc-menu li a::after {
+    transform: scale(0.2, 1);
+  }
+  .header .pc-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 11;
+  }
+
+  /* ボタンの作成 */
+  .menu-trigger {
+    position: fixed;
+    right: 30px;
+    top: 15px;
+    z-index: 12;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .menu-trigger span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #121212;
+    transition: 0.5s;
+  }
+  /* 位置調整 */
+  #header .menu-trigger span:nth-child(1) {
+    top: 4px;
+  }
+  #header .menu-trigger span:nth-child(2) {
+    top: 14px;
+  }
+  #header .menu-trigger span:nth-child(3) {
+    bottom: 4px;
+  }
+  /* ボタンクリック時のアクション */
+  .header .menu-trigger span {
+    background-color: #121212;
+  }
+  .header .menu-trigger span:nth-child(1) {
+    transform: translateY(10px) rotate(-315deg);
+  }
+  .header .menu-trigger span:nth-child(2) {
+    opacity: 0;
+  }
+  .header .menu-trigger span:nth-child(3) {
+    transform: translateY(-10px) rotate(315deg);
+  }
+  #mask {
+    display: none;
+    transition: 0.5s;
+  }
+  .header #mask {
+    display: block;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    cursor: pointer;
+  }
+  .main-visual img {
+    margin-top: 60px;
+  }
+
+  #scrollGo {
+    bottom: 50%;
+  }
+
+  /*--------------------
+    about
+  --------------------*/
+  .about-right {
+    padding: 10px;
+  }
+  /*--------------------
+    profile
+  --------------------*/
+  #main-about {
+    margin: 0;
+  }
+  #main-about .container {
+    padding: 60px 20px;
+  }
+  #profile .container {
+    margin-top: 55px;
+  }
+  .profileAll {
+    display: block;
+  }
+  #profile-pic {
+    height: auto;
+  }
+  .myname {
+    margin-top: 20px;
+  }
+  .profile-left {
+    text-align: center;
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-right: 0;
+  }
+  .profile-right {
+    text-align: center;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .skills-message {
+    padding: 10px 60px;
+    margin-bottom: 60px;
+  }
+  .skills-introduction {
+    padding: 0 60px;
+    margin-bottom: 0;
+  }
+  .skills-introduction ul {
+    text-align: center;
+    width: 100%;
+    flex-wrap: none;
+    flex-direction: column;
+  }
+  .skills-introduction ul li {
+    width: 100%;
+    margin: 0;
+  }
+  .skills-introduction ul li:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .skills-introduction ul li h4 {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    margin-top: 0;
+  }
+  .skills-introduction ul li img {
+    width: auto;
+    height: auto;
+  }
+  .skills-area {
+    height: auto;
+  }
+  .skills-list {
+    display: none;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .careerTop {
+    display: none;
+  }
+  .careerAll {
+    padding: 0 60px;
+  }
+  .career-left {
+    border-right: none;
+  }
+  .minimal-title {
+    font-size: 1rem;
+  }
+  .minimal-contents {
+    font-size: 0.9rem;
+  }
+  .minimal-contents br {
+    display: none;
+  }
+  /*--------------------
+    works
+  --------------------*/
+  .worksWrapper,
+  .contentsWrapper {
+    padding-bottom: 10px;
+  }
+  .contentsGroup li {
+    width: 50%;
+  }
+  .modal__content {
+    width: 600px;
+  }
+
+  /*** works ***/
+  #main-contents {
+    margin-top: 60px;
+  }
+
+  .productList {
+    padding: 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: initial;
+  }
+  .productList dt {
+    width: 20%;
+    padding: 15px;
+  }
+  .productList dd {
+    width: 80%;
+    padding: 15px;
+  }
+
+  /*--------------------
+    footer
+  --------------------*/
+  #footer {
+    padding-bottom: 50px;
+  }
+  .bottomNav ul.snsLink li:nth-of-type(1) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .productList {
+    padding: 10px;
+    margin: 0 10px;
+  }
+  .productList dt {
+    width: 100%;
+    border-bottom: none;
+    padding: 5px 15px;
+  }
+  .productList dd {
+    width: 100%;
+    padding: 0 15px 15px 15px;
+  }
+  .modal__content {
+    width: 400px;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /*--------------------
+    共通
+  --------------------*/
+  #main {
+    margin: 0;
+  }
+  .container {
+    padding: 60px 20px;
+  }
+  .section-title {
+    padding-top: 0;
+  }
+  .sub-title {
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+  #main-index .container,
+  #main-about .container,
+  #main-contents .container {
+    padding: 30px 20px;
+  }
+
+  #header {
+    height: 55px;
+  }
+  #header .container {
+    padding: 10px 20px;
+  }
+  #header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .menu-trigger {
+    top: 12.5px;
+  }
+
+  #scrollGo {
+    bottom: 55%;
+  }
+  .main-visual img {
+    margin-top: 55px;
+  }
+  /*--------------------
+    about
+  --------------------*/
+  .aboutAll {
+    margin-top: 60px;
+  }
+  .about-right {
+    padding: 10px;
+  }
+  .more-view {
+    position: initial;
+    margin-top: 60px;
+  }
+
+  /*--------------------
+    works
+  --------------------*/
+  .worksWrapper,
+  .contentsWrapper {
+    margin-top: 60px;
+    padding-bottom: 10px;
+  }
+  .contentsGroup {
+    text-align: center;
+  }
+  .contentsGroup li span {
+    font-size: 0.7rem;
+  }
+  .workGroup {
+    flex-direction: column;
+  }
+  .workGroup li:not(:first-child) {
+    margin-top: 60px;
+  }
+  .contentsGroup .contents-title {
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+  .contentsGroup .contents-title::before {
+    display: none;
+  }
+
+  /*--------------------
+    profile
+  --------------------*/
+  #profile .container {
+    margin-top: 55px;
+  }
+  .profileAll {
+    margin-top: 60px;
+    padding: 10px;
+  }
+  .profile-left {
+    padding: 0;
+  }
+  .profile-right {
+    padding: 10px;
+  }
+  .japanese {
+    font-size: 0.8rem;
+  }
+  .skills-message {
+    padding: 15px;
+    margin: 60px 0;
+  }
+  .skills-introduction {
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .skills-introduction ul li p {
+    font-size: 0.8rem;
+  }
+  .careerAll {
+    padding: 0;
+    margin: 60px 0 0 0;
+  }
+  .careerAll .minimal-title {
+    width: 100%;
+    padding: 10px 15px 0 15px;
+  }
+  .careerAll .minimal-contents {
+    width: 100%;
+    padding: 10px 15px;
+    border-left: none;
+  }
+  .careerAll .minimal-contents::before {
+    display: none;
+  }
+
+  /*--------------------
+    product
+  --------------------*/
+  #product .section-title {
+    font-size: 1.5rem;
+  }
+  .productTop {
+    margin: 10px;
+  }
+  .productList {
+    padding: 10px;
+    margin: 0 10px;
+  }
+  .productList dt {
+    width: 100%;
+    border-bottom: none;
+    padding: 5px 15px;
+  }
+  .productList dd {
+    width: 100%;
+    padding: 0 15px 15px 15px;
+  }
+
+  .modal__content {
+    width: 300px;
+    height: 80%;
+  }
+
+  /*--------------------
+    contact
+  --------------------*/
+  .contactTop p {
+    font-size: 0.8rem;
+  }
+  .contactAll {
+    margin-top: 60px;
+  }
+  /*--------------------
+    footer
+  --------------------*/
+  #footer {
+    padding-bottom: 50px;
+  }
+}
