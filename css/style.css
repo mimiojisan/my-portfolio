@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   color: #121212;
+  background: #ecece7;
   font-family: "Noto Sans JP", sans-serif;
 }
 a {
@@ -25,18 +26,18 @@ img {
   共通
 --------------------*/
 .container {
-  max-width: 1000px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 70px 20px;
 }
 #main-about,
-#main-contents,
+#main-works,
 #main-contact,
 #main-work {
   margin-top: 100px;
 }
 .section-title {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   padding-top: 90px;
 }
@@ -46,17 +47,6 @@ img {
   font-size: 1rem;
   text-align: center;
   position: relative;
-}
-
-.sub-title::after {
-  content: "";
-  width: 30px;
-  height: 3px;
-  display: inline-block;
-  background-color: #121212;
-  position: absolute;
-  bottom: -25px;
-  left: calc(50% - 15px);
 }
 
 /*--------------------
@@ -117,10 +107,15 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5%;
 }
 
 #header .container {
   padding: 20px 20px 0 20px;
+}
+
+.bg-color {
+  background: transparent;
 }
 
 .pc-menu {
@@ -159,10 +154,6 @@ img {
 
 .pc-menu li i {
   margin-right: 5px;
-}
-
-.bg-color {
-  background-color: #fff;
 }
 
 /*--------------------
@@ -264,138 +255,71 @@ main
 /*--------------------
   works
 --------------------*/
-#main-contents .section-title {
-  padding: 0;
+
+#works .container {
+  padding-bottom: 0;
 }
 
-#works {
-  background-color: #f9f7f5;
-}
-#works h2,
-#contents h2 {
+#works h2 {
   color: #121212;
 }
-#works img,
-#contents img {
+#works img {
   height: auto;
   vertical-align: bottom;
 }
-.worksWrapper,
-.contentsWrapper {
+
+.worksWrapper {
   text-align: center;
   margin-top: 90px;
 }
-.workGroup {
-  display: flex;
-  flex-wrap: nowrap;
-  text-align: initial;
-  padding-top: 10px;
-}
-.contentsGroup {
+
+.worksGroup {
   display: flex;
   flex-wrap: wrap;
   text-align: initial;
-  padding-top: 10px;
+  border-bottom: 1px solid #1f1f1f;
 }
-.works-title,
-.contents-title {
+
+.works-title {
   position: relative;
-  margin: 20px 0 5px 10px;
+  margin: 20px 0 5px 30px;
 }
-.works-title::before,
-.contents-title::before {
+
+.works-title::before {
   content: "";
   position: absolute;
   bottom: 0;
-  left: -10px;
+  left: -15px;
   width: 3px;
   height: 25px;
   background: #121212;
 }
-.workGroup span,
-.contentsGroup span {
+
+.worksGroup span {
+  padding: 0 0 0 30px;
   font-size: 0.9rem;
   color: #9e9e9f;
 }
-.workGroup li {
+
+.worksGroup li {
   padding: 0 15px;
-}
-.contentsGroup li {
-  padding: 0 15px;
-  width: 33%;
+  width: 50%;
   margin-bottom: 50px;
 }
 
 /*--------------------
-  contact
---------------------*/
-#contact h2 {
-  color: #121212;
-}
-#contact i {
-  margin-right: 5px;
-}
-.contactAll {
-  text-align: center;
-  padding: 10px 30px;
-  margin-top: 90px;
-}
-/*--------------------
 footer
 --------------------*/
 #footer {
-  font-size: 0.8rem;
   text-align: center;
-  padding: 10px 20px 50px 20px;
-}
-.bottomNav {
-  display: flex;
-  justify-content: center;
-}
-.bottomNav .snsLink {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 80px;
-  padding: 10px 0;
-}
-.bottomNav .snsLink li {
-  padding: 10px;
-}
-.bottomNav .snsLink li a:hover {
-  opacity: 0.7;
+  padding: 20px;
+  color: #fff;
+  background: #121e2e;
 }
 
-/* topに戻るボタンの作成 */
-#return-top {
-  position: fixed;
-  right: 15px;
-  bottom: 10px;
-  transition: all 0.4s ease-in-out 0s;
-}
-#return-top a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #121212;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 0.6rem;
-  transition: all 0.3s;
-}
-#return-top span {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border-top: 1px solid #121212;
-  border-left: 1px solid #121212;
-  transform: rotate(45deg);
-  margin: 8px 0 0 0;
+.copyright {
+  margin: auto;
+  font-size: 0.2vw;
 }
 
 /*------------------------------
@@ -404,9 +328,6 @@ about.html
 /*--------------------
   profile
 --------------------*/
-#main-about .section-title {
-  padding: 0;
-}
 #profile h2 {
   color: #121212;
 }
@@ -416,32 +337,51 @@ about.html
   margin-top: 90px;
 }
 #profile-pic {
-  position: relative;
   width: 100%;
+  box-shadow: 0 0 10px #c7c7c7;
 }
+
 .profile-left {
+  position: relative;
   padding: 10px;
   margin-right: 30px;
 }
 .profile-right {
-  margin: auto;
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 446px;
+  width: 100%;
+  flex-basis: 34.6%;
+  padding: 6.7rem 5.8rem 1.7rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  -moz-backdrop-filter: blur(12px);
+}
+
+.profile-right_name_ruby {
+  font-size: 0.8rem;
+}
+
+.profile-right h3 {
+  font-size: 2rem;
+  margin-bottom: 2vh;
 }
 .japanese {
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 5px 0;
 }
 
-#skills {
-  background-color: #f9f7f5;
-}
 #skills h2 {
   color: #121212;
 }
 .skills-message {
   font-size: 0.9rem;
   text-align: center;
-  margin: 90px 0;
+  margin: 90px auto;
   padding: 10px 80px;
+  width: 80%;
 }
 .skills-introduction {
   display: flex;
@@ -490,50 +430,6 @@ about.html
 .grey {
   color: #cccccc;
 }
-#career h2 {
-  color: #121212;
-}
-.careerTop {
-  padding: 10px 0;
-  margin: 90px 0 60px 0;
-  text-align: center;
-}
-.careerAll {
-  padding: 10px 60px;
-  margin: 90px 0;
-}
-.careerAll dl {
-  display: flex;
-  flex-wrap: wrap;
-}
-.careerAll .minimal-title {
-  width: 20%;
-  font-size: 1rem;
-  position: relative;
-  padding: 35px 15px 15px 60px;
-}
-.careerAll .minimal-contents {
-  width: 80%;
-  position: relative;
-  font-size: 0.9rem;
-  padding: 35px 15px 15px 60px;
-  border-left: 1px solid #c8c8c8;
-}
-.careerAll .minimal-contents::before {
-  content: "";
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #c8c8c8;
-  position: absolute;
-  top: 45px;
-  left: -8px;
-}
-.career-bold {
-  font-size: 1rem;
-  font-weight: 500;
-}
 
 /*--------------------
   product
@@ -547,7 +443,8 @@ about.html
 .productTop {
   position: relative;
   text-align: center;
-  margin: 20px;
+  width: 80%;
+  margin: 20px auto;
   padding: 10px;
 }
 .productTop img {
@@ -581,91 +478,17 @@ about.html
 /*--------------------
   垂れ幕
 --------------------*/
-.bgDU,
-.bgDU .bg-mask {
-  display: block;
+.bgDU {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
-}
-.bgDU .bg-mask::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-  transform: translateY(100%);
-  background: rgba(105, 105, 105, 0.7);
-  width: 100%;
-  height: 100%;
-}
-.bgDU:hover .bg-mask::before {
-  opacity: 1;
-  transform: translateY(0);
-}
-.bgDU .cap {
-  position: absolute;
-  opacity: 0;
-  transition: 0.5s ease-in-out;
-  z-index: 3;
-  top: 35%;
-  left: 50%;
-  transform: translate(-45%, -50%);
-  color: #fff;
-  text-align: center;
-}
-.bgDU:hover .cap {
-  opacity: 1;
-}
-.cap span {
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  display: inline-block;
-  padding: 5px 10px;
-  text-align: center;
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-#works img,
-#contents img {
-  height: auto;
-  vertical-align: bottom;
 }
 
-/*--------------------
-  波
---------------------*/
-.circle span.circle-mask {
-  display: block;
-  overflow: hidden;
-  position: relative;
-}
-.circle span.circle-mask::before {
-  position: absolute;
-  content: "";
-  transform: scale(0);
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-}
-.circle span.circle-mask:hover::before {
-  animation: circle 0.75s;
-}
-@keyframes circle {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-  }
+#works img,
+#works img {
+  height: auto;
+  vertical-align: bottom;
 }
 
 /*--------------------
@@ -697,7 +520,7 @@ about.html
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 850px;
+  width: 95%;
   height: 90%;
   z-index: 11;
   overflow-y: scroll;

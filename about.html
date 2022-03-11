@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+
 
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
@@ -13,6 +15,8 @@
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- :re_220309 add -->
+    <link rel="stylesheet" href="css/re.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -32,9 +36,9 @@
                 <nav id="g-nav">
                     <div id="g-nav-list">
                             <ul id="g-navi" class="pc-menu">
-                                <li><a href="./about.html">About</a></li>
-                                <li><a href="./contents.html">Works</a></li>
-                                <li><a href="./index.html#contact">Contact</a></li>
+                                <li><a href="./index.html#works">Works</a></li>                                
+                                <li><a href="#">About</a></li>
+                                <li><a href="mailto:ranparu.1230@gmail.com">Contact</a></li>
                             </ul>
                     </div>
                 </nav>
@@ -56,159 +60,77 @@
             <div class="container">
                 <h2 class="section-title">About</h2>
                 <p class="sub-title">私について</p>
-                <div class="profileAll">
-                    <div class="profile-left">
+                <div class="area1-flex">
+                    <div class="area1-flex-img">
                         <img src="img/profile_sora.png" alt="profile-picture" id="profile-pic">
                     </div>
-                    <div class="profile-right">
-                        <p class="japanese">京都府出身の25歳。</p>
-                        <p class="japanese">SAPエンジニアとして、客先常駐で就業していました。</p>
-                        <p class="japanese">2021年の秋頃からデザインやプログラムの勉強を始め、模写やアプリ制作など絶賛勉強中の毎日です。</p>
-                        <p class="japanese">「開発者は一消費者であること」を心掛け、誰が見ても使いやすいモノの制作を目標としています。</p>
-                        <p class="japanese">コミュニケーション能力と論理的思考を活かし、持ち前の好奇心と行動力で常に挑戦し続けます。</p>
+                    <div class="area1-flex-box1">
+                        <h3 class="area1-flex-box-ttl">驚きと感動を。<br>誰かの背中を押せるようなそんなデザインを作っていきたい</h3>
                     </div>
+                </div>
+                <div class="area1-flex-box2 fadeUp">
+                    <p class="area1-flex-box_ruby">SHUNSUKE NAKAGAWA</p>
+                    <h3 class="area1-flex-box_name">中川 峻輔</h3>
+                    <p class="area1-flex-box-ttl">25歳 京都府出身 大阪府在住<br>
+                                                                SAPエンジニアとして、客先常駐で就業していました。<br>
+                                                                2021年の秋頃からデザインやプログラムの勉強を始め、模写やアプリ制作など絶賛勉強中の毎日です。<br>
+                                                                 「開発者は一消費者であること」を心掛け、誰が見ても使いやすいモノの制作を目標としています。<br>
+                                                                コミュニケーション能力と論理的思考を活かし、持ち前の好奇心と行動力で常に挑戦し続けます。
+                    </p>
                 </div>
             </div>
         </section>
 
-        <div data-aos="fade-up">
-            <!-- skills start -->
-            <section id="skills">
-                <div class="container">
-                    <h2 class="section-title">Skills</h2>
-                    <p class="sub-title">私にできること</p>
-                    <div class="skills-message">
-                        私は動的に作用するデザインやプログラムが好きです。
-                        常に最新とされる情報や感性に配慮し、自ら学ぶことを続けています。
-                        また、「正解は一つではない」という信念のもと、
-                        あらゆる角度から物事に取り組み、成長を目指しています。
-                    </div>
-                    <div class="skills-introduction">
-                        <ul>
-                            <li>
-                                <figure class="circle">
-                                    <span class="circle-mask">
-                                        <img src="img/design.jpg" width="300px" height="200px" alt="skill-design">
-                                    </span>
-                                </figure>    
-                                <div class="skills-area">
-                                    <h4>Web Design</h4>
-                                    <p>直観的かつ機能性に富み、ユーザーを魅了する効果的なデザインをご提案いたします。Figma、Adobe製品を用いたデザインやフレームの作成もお任せください。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <figure class="circle">
-                                    <span class="circle-mask">
-                                        <img src="img/seo1.jpg" width="300px" height="200px" alt="skill-seo">
-                                    </span>
-                                </figure>    
-                                <div class="skills-area">
-                                    <h4>Frontend</h4>
-                                    <p>HTML、CSS、Javascriptを日々勉強しています。フレームワークの一種であるVue.jsへの理解を深め、より簡潔に、より効率的なコーディングを意識しています。また、ブログを通じてWordPressの知識も追求しております。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <figure class="circle">
-                                    <span class="circle-mask">
-                                        <img src="img/uiux.jpg" width="300px" height="200px" alt="skill-uiux">
-                                    </span>
-                                </figure>    
-                                <div class="skills-area">
-                                    <h4>UI / UX Design</h4>
-                                    <p>伝えたい情報、知りたい情報を瞬時に読み取り、ユーザーにとって心地の良いサービスを提供いたします。ユーザー目線の構成でストレスのない使い勝手の良いデザインを勘案します。</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="skills-list">
-                        <dl>
-                            <dt>HTML</dt>
-                            <dd><span class="black">●●●●●●●●</span><span class="grey">●●</span></dd>
-                            <dt>CSS</dt>
-                            <dd><span class="black">●●●●●●●●</span><span class="grey">●●</span></dd>                        </dl>
-                        <dl>
-                            <dt>JavaScript</dt>
-                            <dd><span class="black">●●●●●●</span><span class="grey">●●●●</span></dd>
-                            <dt>jQuery</dt>
-                            <dd><span class="black">●●●●●</span><span class="grey">●●●●●</span></dd>
-                        </dl>
-                        <dl>
-                            <dt>Vue.js</dt>
-                            <dd><span class="black">●●●●</span><span class="grey">●●●●●●</span></dd>
-                            <dt>Wordpress</dt>
-                            <dd><span class="black">●●</span><span class="grey">●●●●●●●●</span></dd>
-                        </dl>
-                    </div>
-                </div>
-            </section> 
-        </div>
-
-        <div data-aos="fade-up">
-            <!-- career start -->
-            <section id="career">
-                <div class="container">
-                    <h2 class="section-title">Career</h2>
-                    <p class="sub-title">経歴について</p>
-                    <div class="careerTop">
-                        <img src="img/history.png" alt="career-pic" id="career-pic">
-                    </div>
-                    <div class="careerAll">
-                        <dl>
-                            <dt class="minimal-title">2015年</dt>
-                            <dd class="minimal-contents">
-                                <span class="career-bold">高校卒業後、工業大学に入学</span>
-                                <p>システムを法律の観点から学びたいという考えから、権利を専門的に扱う国内唯一の大学に進学。
-                                知的財産権のうち産業財産権（特許権・実用新案権・商標権・意匠権）を重点的に学ぶ。
-                            </dd>
-                            <dt class="minimal-title">2019年</dt>
-                            <dd class="minimal-contents">
-                                <span class="career-bold">SIer会社に入社し、客先常駐にて勤務</span>
-                                <p>SAP社が提供するERPシステムのエンジニアとして従事。
-                                自動車業や保険業、電力業などの顧客先で、
-                                法改正対応やシステム改修などを実施。
-                                設計書作成から開発・テストまで担当範囲は多岐にわたる。</p>
-                            </dd>  
-                            <dt class="minimal-title">2021年</dt>
-                            <dd class="minimal-contents">
-                                <span class="career-bold">10月半ばで2年半務めた会社を退職し、フロントエンドを独学</span>
-                                <p>静的プログラムを開発している中で、昔から好きだった動的かつデザイン性に富んだサイトの開発に携わりたいという想いが強くなり転職を決意。</p>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-            </section>        
-        </div>
+        <!-- favorite start -->
+        <section id="favorite" class="favorite">
+            <div class="container">
+                <h2 class="section-title">favorite</h2>
+                <p class="sub-title">私の好きなもの</p>
+                <ul class="favorite-flex">
+                    <li class="favorite-flex-box">
+                        <div class="favorite-flex-box-img fadeUp">
+                            <img src="img/make.jpeg" alt="料理">
+                        </div>
+                        <div class="favorite-flex-box-gp">
+                            <p class="favorite-flex-box-ttl ">料理をすること</p>
+                            <p class="favorite-flex-box-txt">毎日必ず料理をします。幼少期からお手伝いという形でしていましたが、一人暮らしをきっかけに本格的に始めました。得意料理は豚の角煮です。</p>
+                        </div>
+                    </li>
+        
+                    <li class="favorite-flex-box">
+                        <div class="favorite-flex-box-img fadeUp">
+                            <img src="img/concert.jpeg" alt="ライブ">
+                        </div>
+                        <div class="favorite-flex-box-gp">
+                            <p class="favorite-flex-box-ttl">ライブに行くこと</p>
+                            <p class="favorite-flex-box-txt">現在はコロナ禍ということもあり、あまり行けていませんが以前はよく行っていました。邦ロックをよく聴きます。</p>
+                        </div>
+                    </li>
+        
+                    <li class="favorite-flex-box">
+                        <div class="favorite-flex-box-img fadeUp">
+                            <img src="img/movie.jpeg" alt="映画">
+                        </div>
+                        <div class="favorite-flex-box-gp">
+                            <p class="favorite-flex-box-ttl">映画を見ること</p>
+                            <p class="favorite-flex-box-txt">ミッションインポッシブルが好きで全作見ました。好きな登場人物はジェレミー・レナー演じるウィリアム・ブラントで憧れの存在です。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section> 
 
     </main>
 
     <!-- footer start -->
     <!-- 共通フッター -->
     <footer id="footer">
-        <nav class="bottomNav">
-            <ul class="snsLink">
-                <li><a href="https://github.com/mimiojisan/my-portfolio" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="mailto:ranparu.1230@gmail.com"><i class="fas fa-envelope"></i></a></li>
-            </ul>
-        </nav>
-        <p>© 2021 Shunsuke Nakagawa</p>
-        <p id="return-top"><a href="#"><span></span></a></p>
+        <p class="copyright">© 2022 | SHUNSUKE NAKAGAWA All Rights Reserved.</p>
     </footer>
 
     <!-- js -->
-    <script src="js/return.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-        offset: 120,
-        delay: 0,
-        duration: 1000,
-        easing: 'ease',
-        once: false,
-        mirror: false,
-        anchorPlacement: 'top-bottom',
-        });
-    </script>
 
 </body>
 </html>

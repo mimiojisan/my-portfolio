@@ -29,7 +29,6 @@
     width: 100%;
     height: 60px;
     padding: 0;
-    background-color: #fff;
   }
 
   #header .container {
@@ -51,7 +50,7 @@
     top: 0;
     right: 0;
     height: 100%;
-    width: 50%;
+    width: 100%;
     background-color: rgba(249, 247, 245, 0.9);
   }
   .pc-menu li {
@@ -136,12 +135,13 @@
     background-color: #000000;
     cursor: pointer;
   }
-  .main-visual img {
-    margin-top: 60px;
-  }
 
   #scrollGo {
-    bottom: 50%;
+    top: 50%;
+  }
+
+  #scrollGo::after {
+    height: 50px;
   }
 
   /*--------------------
@@ -185,59 +185,67 @@
   .skills-message {
     padding: 10px 60px;
     margin-bottom: 60px;
+    width: 90%;
   }
-  .skills-introduction {
-    padding: 0 60px;
-    margin-bottom: 0;
+
+  .flex {
+    width: 90%;
   }
-  .skills-introduction ul {
-    text-align: center;
-    width: 100%;
-    flex-wrap: none;
-    flex-direction: column;
+
+  .flex li {
+    padding: 2vh;
+    width: 50%;
   }
-  .skills-introduction ul li {
-    width: 100%;
-    margin: 0;
+
+  .area1-flex .area1-flex-box1 {
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, 50%);
+    width: 50vw;
   }
-  .skills-introduction ul li:not(:last-child) {
-    margin-bottom: 50px;
+
+  .area1-flex .area1-flex-box1 .area1-flex-box-ttl {
+    font-size: 3vw;
   }
-  .skills-introduction ul li h4 {
-    font-size: 1.5rem;
-    padding: 10px 0;
-    margin-top: 0;
+
+  .area1-flex-box2 {
+    width: 90%;
+    margin: 20vh auto 0;
+    padding: 3rem;
   }
-  .skills-introduction ul li img {
-    width: auto;
-    height: auto;
+
+  .area1-flex-box2 .area1-flex-box-ttl {
+    letter-spacing: 0.1em;
+    text-align: left;
   }
-  .skills-area {
-    height: auto;
+
+  @media screen and (max-width: 768px) {
+    .area1-flex .area1-flex-box1 {
+      display: none;
+    }
+
+    .area1-flex-box2 {
+      margin: 90px auto 0;
+      padding: 2rem;
+    }
+
+    .favorite .favorite-flex {
+      flex-direction: column;
+      width: 90%;
+      margin-bottom: 0;
+    }
+
+    .favorite .favorite-flex .favorite-flex-box {
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+
+    .favorite .favorite-flex .favorite-flex-box:nth-of-type(3) {
+      padding-top: 6vh;
+    }
   }
-  .skills-list {
-    display: none;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-  .careerTop {
-    display: none;
-  }
-  .careerAll {
-    padding: 0 60px;
-  }
-  .career-left {
-    border-right: none;
-  }
-  .minimal-title {
-    font-size: 1rem;
-  }
-  .minimal-contents {
-    font-size: 0.9rem;
-  }
-  .minimal-contents br {
-    display: none;
-  }
+
   /*--------------------
     works
   --------------------*/
@@ -249,12 +257,18 @@
     width: 50%;
   }
   .modal__content {
-    width: 600px;
+    width: 90%;
+    height: 90%;
   }
 
   /*** works ***/
   #main-contents {
     margin-top: 60px;
+  }
+
+  .productTop {
+    margin: 10px auto;
+    width: 90%;
   }
 
   .productList {
@@ -272,38 +286,52 @@
     padding: 15px;
   }
 
+  .product_ttl {
+    width: 90%;
+  }
+
+  .product_charge {
+    display: none;
+  }
+
+  .product_info {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .product_ruby {
+      font-size: 2.4vw;
+    }
+
+    .product_name {
+      font-size: 6.4vw;
+      letter-spacing: 0.05em;
+    }
+
+    .product_info_ttl {
+      font-size: 5vw;
+      line-height: 1.5em;
+    }
+
+    .product_info_txt {
+      font-size: 2.9vw;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  #main-index .container {
+    padding: 85px 20px 60px;
+  }
+
   /*--------------------
     footer
   --------------------*/
-  #footer {
-    padding-bottom: 50px;
-  }
   .bottomNav ul.snsLink li:nth-of-type(1) {
     margin-left: 0;
   }
 }
 
-@media screen and (max-width: 650px) {
-  .productList {
-    padding: 10px;
-    margin: 0 10px;
-  }
-  .productList dt {
-    width: 100%;
-    border-bottom: none;
-    padding: 5px 15px;
-  }
-  .productList dd {
-    width: 100%;
-    padding: 0 15px 15px 15px;
-  }
-  .modal__content {
-    width: 400px;
-    height: 80%;
-  }
-}
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   /*--------------------
     共通
   --------------------*/
@@ -320,10 +348,8 @@
     margin-bottom: 30px;
     font-size: 1rem;
   }
-  #main-index .container,
-  #main-about .container,
-  #main-contents .container {
-    padding: 30px 20px;
+  #main-index .container {
+    padding: 85px 20px 30px;
   }
 
   #header {
@@ -340,12 +366,10 @@
     top: 12.5px;
   }
 
-  #scrollGo {
-    bottom: 55%;
-  }
-  .main-visual img {
+  .top-visual img {
     margin-top: 55px;
   }
+
   /*--------------------
     about
   --------------------*/
@@ -377,6 +401,9 @@
   .workGroup {
     flex-direction: column;
   }
+  .worksGroup li {
+    width: 100%;
+  }
   .workGroup li:not(:first-child) {
     margin-top: 60px;
   }
@@ -391,9 +418,6 @@
   /*--------------------
     profile
   --------------------*/
-  #profile .container {
-    margin-top: 55px;
-  }
   .profileAll {
     margin-top: 60px;
     padding: 10px;
@@ -402,37 +426,41 @@
     padding: 0;
   }
   .profile-right {
+    margin-top: 2vh;
     padding: 10px;
   }
+
+  .profile-right_name_ruby {
+    font-size: 0.8rem;
+  }
+
   .japanese {
     font-size: 0.8rem;
   }
   .skills-message {
-    padding: 15px;
-    margin: 60px 0;
-  }
-  .skills-introduction {
-    padding: 15px;
-    margin-top: 30px;
-    margin-bottom: 0px;
-  }
-  .skills-introduction ul li p {
-    font-size: 0.8rem;
-  }
-  .careerAll {
-    padding: 0;
-    margin: 60px 0 0 0;
-  }
-  .careerAll .minimal-title {
     width: 100%;
-    padding: 10px 15px 0 15px;
+    padding: 15px;
+    margin: 60px auto 30px;
   }
-  .careerAll .minimal-contents {
+
+  .flex {
     width: 100%;
-    padding: 10px 15px;
-    border-left: none;
+    margin: 60px 0 0;
   }
-  .careerAll .minimal-contents::before {
+
+  .flex li img {
+    width: auto;
+    height: 10vh;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin-bottom: 2vh;
+  }
+
+  .flex li p {
+    font-size: 1.1rem;
+  }
+
+  .flex li span {
     display: none;
   }
 
@@ -443,7 +471,8 @@
     font-size: 1.5rem;
   }
   .productTop {
-    margin: 10px;
+    margin: 10px auto;
+    width: 90%;
   }
   .productList {
     padding: 10px;
@@ -460,10 +489,24 @@
   }
 
   .modal__content {
-    width: 300px;
-    height: 80%;
+    width: 90%;
+    height: 90%;
   }
 
+  .product_ttl {
+    margin: 40px auto 10px;
+    padding: 10px;
+  }
+
+  .product_info {
+    margin: 10px auto;
+    padding: 10px;
+    border-bottom: 1px solid #1f1f1f;
+  }
+
+  .product_position {
+    font-size: 0.6rem;
+  }
   /*--------------------
     contact
   --------------------*/
@@ -477,6 +520,6 @@
     footer
   --------------------*/
   #footer {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 }
