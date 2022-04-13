@@ -51,24 +51,27 @@
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(249, 247, 245, 0.9);
+    background-color: rgba(223, 182, 84, 0.5);
   }
-  .pc-menu li {
-    font-size: 0.9rem;
-    width: 100%;
-    margin: 0;
-    flex: none;
-    letter-spacing: 0.15em;
-    padding: 24px;
+  .pc-menu li a {
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0.3em;
+    color: #121e2e;
   }
 
+  .pc-menu li a {
+    color: #121e2e;
+  }
   .pc-menu li a:hover {
-    color: #121212;
+    color: #121e2e;
   }
 
   .pc-menu li a::after {
-    transform: scale(0.2, 1);
+    transform: scale(0.2, 0.8);
+    background: #121e2e;
   }
+
   .header .pc-menu {
     opacity: 1;
     visibility: visible;
@@ -76,7 +79,7 @@
   }
 
   /* ボタンの作成 */
-  .menu-trigger {
+  /* .menu-trigger {
     position: fixed;
     right: 30px;
     top: 15px;
@@ -86,6 +89,7 @@
     cursor: pointer;
     transition: 0.5s;
   }
+
   .menu-trigger span {
     display: block;
     position: absolute;
@@ -93,11 +97,11 @@
     width: 30px;
     height: 2px;
     border-radius: 4px;
-    background-color: #121212;
+    background-color: #121e2e;
     transition: 0.5s;
   }
   /* 位置調整 */
-  #header .menu-trigger span:nth-child(1) {
+  /* #header .menu-trigger span:nth-child(1) {
     top: 4px;
   }
   #header .menu-trigger span:nth-child(2) {
@@ -105,10 +109,10 @@
   }
   #header .menu-trigger span:nth-child(3) {
     bottom: 4px;
-  }
+  } */
   /* ボタンクリック時のアクション */
-  .header .menu-trigger span {
-    background-color: #121212;
+  /* .header .menu-trigger span {
+    background-color: #121e2e;
   }
   .header .menu-trigger span:nth-child(1) {
     transform: translateY(10px) rotate(-315deg);
@@ -125,23 +129,24 @@
   }
   .header #mask {
     display: block;
-    opacity: 0.9;
+    opacity: 1;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: #fff;
     cursor: pointer;
-  }
+  }  */
 
   #scrollGo {
-    top: 50%;
+    bottom: 20%;
+    padding-bottom: 40px;
   }
 
   #scrollGo::after {
-    height: 50px;
+    height: 30px;
   }
 
   /*--------------------
@@ -153,11 +158,11 @@
   /*--------------------
     profile
   --------------------*/
-  #main-about {
+  /* #main-about {
     margin: 0;
-  }
+  } */
   #main-about .container {
-    padding: 60px 20px;
+    padding: 85px 20px 30px;
   }
   #profile .container {
     margin-top: 55px;
@@ -197,11 +202,19 @@
     width: 50%;
   }
 
+  .area1-flex {
+    margin: 60px auto 0;
+  }
+
+  .area1-flex .area1-flex-img {
+    padding: 0 30px;
+  }
+
   .area1-flex .area1-flex-box1 {
-    bottom: 0;
-    right: 0;
+    bottom: -400px;
+    left: 50%;
     transform: translate(-50%, 50%);
-    width: 50vw;
+    margin: 0 0 5rem 0;
   }
 
   .area1-flex .area1-flex-box1 .area1-flex-box-ttl {
@@ -210,29 +223,46 @@
 
   .area1-flex-box2 {
     width: 90%;
-    margin: 20vh auto 0;
+    /* margin: 650px auto 0; */
     padding: 3rem;
   }
 
+  .area1-flex-box2::before {
+    top: 25px;
+    left: -25px;
+    width: 100px;
+  }
+
+  .area1-flex-box2::after {
+    bottom: 25px;
+    right: -25px;
+    width: 100px;
+  }
+  .area1-flex-box_ruby {
+    color: #22304f;
+    font-size: 0.6rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  .area1-flex-box_name {
+    color: #22304f;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    margin: 0.8vh 0 2vh;
+  }
+
   .area1-flex-box2 .area1-flex-box-ttl {
+    font-size: 0.8rem;
     letter-spacing: 0.1em;
     text-align: left;
   }
 
   @media screen and (max-width: 768px) {
-    .area1-flex .area1-flex-box1 {
-      display: none;
-    }
-
-    .area1-flex-box2 {
-      margin: 90px auto 0;
-      padding: 2rem;
-    }
-
     .favorite .favorite-flex {
       flex-direction: column;
       width: 90%;
-      margin-bottom: 0;
+      margin: 60px auto 0;
     }
 
     .favorite .favorite-flex .favorite-flex-box {
@@ -242,7 +272,7 @@
     }
 
     .favorite .favorite-flex .favorite-flex-box:nth-of-type(3) {
-      padding-top: 6vh;
+      padding: 6vh 0 2vh;
     }
   }
 
@@ -304,7 +334,7 @@
     }
 
     .product_name {
-      font-size: 6.4vw;
+      font-size: 5vw;
       letter-spacing: 0.05em;
     }
 
@@ -316,6 +346,22 @@
     .product_info_txt {
       font-size: 2.9vw;
       letter-spacing: 0.1em;
+    }
+
+    .product_link_jump {
+      font-size: 2.9vw;
+    }
+
+    .product_link_jump_link {
+      font-size: 2.9vw;
+    }
+
+    .information_content_position {
+      text-align: left;
+    }
+
+    .product_days {
+      font-size: 2.9vw;
     }
   }
 
@@ -355,6 +401,7 @@
   #header {
     height: 55px;
   }
+
   #header .container {
     padding: 10px 20px;
   }
@@ -362,8 +409,9 @@
     margin: 0;
     font-size: 1.5rem;
   }
-  .menu-trigger {
-    top: 12.5px;
+
+  .pc-menu li a {
+    font-size: 1.2rem;
   }
 
   .top-visual img {

@@ -21,6 +21,7 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/theme.js"></script>
 
     <title>Shunsuke Nakagawa</title>
     <meta name="description" content="Shunsuke Nakagawa | portfolio">
@@ -33,23 +34,22 @@
     <header id="header">
         <div class="container">
             <div class="headerWrapper">
-                <h1><a href="#">Shunsuke Nakagawa</a></h1>
+                <h1><a href="#"><img src="img/logo-svg.svg" alt=""></a></h1>
                 <nav id="g-nav">
                     <div id="g-nav-list">
                             <ul id="g-navi" class="pc-menu">
                                 <li><a href="./index.html#works">Works</a></li>                                
-                                <li><a href="./about.html">About</a></li>
+                                <li><a href="./index.html#aboutme">About</a></li>
                                 <li><a href="mailto:ranparu.1230@gmail.com">Contact</a></li>
                             </ul>
                     </div>
                 </nav>
+                <button class="menu-trigger" id="menu-trigger">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div id="mask"></div>
             </div>
-            <button class="menu-trigger" id="menu-trigger">
-                <span></span>
-                <span></span>
-                <span></span>  
-            </button>
-            <div id="mask"></div>
         </div>
     </header>    
 
@@ -57,16 +57,42 @@
     <main id="main-index">
 
         <!-- main-visual start -->
+        <div class="container">
         <div class="top-visual">
-            <img src="./img/P_mainvisual.png" alt="">
+            <span></span>
+            <p><img src="img/message-svg.svg" alt=""></p>
             <div id="scrollGo">scroll</div>   
         </div>
+    </div>
+
+    <!-- aboutme start -->
+    <section id="aboutme" class="aboutme">
+        <div class="container">
+            <h2 class="mttl p-left">ABOUT</h2>
+            <p class="sbttl p-left">私のこと</p>
+            <img src="img/aboutme.jpg" alt="" class="aboutme-img">
+            <div class="aboutme-box">
+                <p class="txt effect-fade">
+                    夢見ることができるのなら、それは実現できるのだ。
+                    <br>これはウォルトディズニーの言葉です。
+                    <br>やりたいこと、叶えたいこと。
+                    <br>考えることは大抵実現できるという意味です。
+                    <br>自分の夢に向かって前進し続ける、
+                    <br>いつまでもわくわくを忘れないオトナでありたいと思っています。
+                </p>
+            </div>
+            <a href="about.html" class="more effect-fade">
+                MORE
+            </a>
+        </div>
+    </section>
 
         <!-- works start -->
         <section id="works">
+            <div class="skewed"></div>
             <div class="container">
-                <h2 class="section-title">works</h2>
-                <p class="sub-title">制作したもの</p>
+                <h2 class="mttl p-right mt-180">WORKS</h2>
+                <p class="sbttl p-right">制作実績</p>
                 <div class="worksWrapper">
                     <ul class="worksGroup">
                         <li>
@@ -76,52 +102,88 @@
                                         <img class="effect-fade" src="img/P_mockup_top.png" alt="" width="640px" height="189px">
                                     </a>
                                 </figure>
-                                <h4 class="works-title">ポートフォリオサイト</h4>
-                                <span>Web Design</span>
+                                <div class="works-box">
+                                    <h4 class="works-title">ポートフォリオサイト</h4>
+                                    <span>WEB DESIGN</span>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div class="bgDU">
                                 <figure>
                                     <a class="js-modal-open"  data-target="modal02">
-                                    <img class="effect-fade" src="img/P_mockup_renth.png" alt="" width="640px" height="189px">
+                                    <img class="effect-fade" src="img/P_mockup_coffee.png" alt="" width="640px" height="189px">
                                     </a>
                                 </figure>
-                                <h4 class="works-title">架空サイト「RENTH STUDIO」</h4>
-                                <span>Web Design</span>
+                                <div class="works-box">
+                                    <h4 class="works-title">架空サイト「COFFEE BREAK」</h4>
+                                    <span>WEB DESIGN</span>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div class="bgDU">
                                 <figure>
                                     <a class="js-modal-open"  data-target="modal03">
-                                        <img class="effect-fade" src="img/P_mockup_clinic.png" alt="" width="640px" height="189px">
+                                    <img class="effect-fade" src="img/P_mockup_renth.png" alt="" width="640px" height="189px">
                                     </a>
                                 </figure>
-                                <h4 class="works-title">架空サイト「もりした歯科医院」</h4>
-                                <span>Web Design</span>
+                                <div class="works-box">
+                                    <h4 class="works-title">架空サイト「RENTH STUDIO」</h4>
+                                    <span>WEB DESIGN</span>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div class="bgDU">
                                 <figure>
                                     <a class="js-modal-open"  data-target="modal04">
-                                        <img class="effect-fade" src="img/P_mockup_task.png" alt="" width="640px" height="189px">
+                                        <img class="effect-fade" src="img/P_mockup_clinic.png" alt="" width="640px" height="189px">
                                     </a>
                                 </figure>
-                                <h4 class="works-title">タスク管理アプリ「たすくん」</h4>
-                                <span>Web App</span>
+                                <div class="works-box">
+                                    <h4 class="works-title">架空サイト「もりした歯科医院」</h4>
+                                    <span>WEB DESIGN</span>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div class="bgDU">
                                 <figure>
                                     <a class="js-modal-open"  data-target="modal05">
+                                        <img class="effect-fade" src="img/P_mockup_movie.png" alt="" width="640px" height="189px">
+                                    </a>
+                                </figure>
+                                <div class="works-box">
+                                    <h4 class="works-title">映画検索アプリ「CINEMA VUE.」</h4>
+                                    <span>WEB APP</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bgDU">
+                                <figure>
+                                    <a class="js-modal-open"  data-target="modal06">
+                                        <img class="effect-fade" src="img/P_mockup_task.png" alt="" width="640px" height="189px">
+                                    </a>
+                                </figure>
+                                <div class="works-box">
+                                    <h4 class="works-title">タスク管理アプリ「たすくん」</h4>
+                                    <span>WEB APP</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bgDU">
+                                <figure>
+                                    <a class="js-modal-open"  data-target="modal07">
                                         <img class="effect-fade" src="img/P_mockup_typing.png" alt="" width="640px" height="189px">
                                     </a>
                                 </figure>
-                                <h4 class="works-title">タイピングゲーム「タイピン」</h4>
-                                <span>Web App</span>
+                                <div class="works-box">
+                                    <h4 class="works-title">タイピングゲーム「タイピン」</h4>
+                                    <span>WEB APP</span>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -129,47 +191,17 @@
             </div>    
         </section>
 
-        <!-- service start -->
-        <section id="service">
+        <!-- contact start -->
+        <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">Service</h2>
-                <p class="sub-title">私にできること</p>
-                <ul class="flex">
-                    <li>
-                        <img src="img/htmlcss.png" alt="HTML/CSS/Sass Logo">
-                        <p>HTML5 / CSS3</p>
-                        <span>デザインカンプ通りのコーディングができます</span>
-                    </li>
-          
-                    <li>
-                        <img src="img/js.png" alt="JavaScript Logo">
-                        <p>JavaScript</p>
-                        <span>オブジェクトに動きをつけることができます</span>
-                    </li>
-          
-                    <li>
-                        <img src="img/wp.png" alt="Wordpress Logo">
-                        <p>Wordpress</p>
-                        <span>静的サイトのWordpress化を習得中です</span>
-                    </li>
-          
-                    <li>
-                        <img src="img/ai.png" alt="Illustrator Logo">
-                        <p>Illustrator</p>
-                        <span>バナー・ロゴの作成ができます</span>
-                    </li>
-          
-                    <li>
-                        <img src="img/ps.png" alt="Photoshop Logo">
-                        <p>Photoshop</p>
-                        <span>切り抜きやレタッチ・デザインカンプの作成ができます</span>
-                    </li>
-          
-                    <li>
-                        <img src="img/xd.png" alt="Adobe XD Logo">
-                        <p>Adobe XD</p>
-                        <span>ワイヤフレーム・プロトタイプの作成ができます</span>
-                    </li>
+                <h2 class="mttl p-center">CONTACT</h2>
+                <p class="sbttl p-center">お問い合わせ</p>
+                <div class="contact-box">
+                    <p class="txt effect-fade">ポートフォリオをご覧いただきありがとうございます。
+                        <br>ご連絡は、下記お問い合わせフォームよりお願いいたします。  
+                    </p>
+                </div>
+                <p class="contact-btn effect-fade"><a href="mailto:ranparu.1230@gmail.com">CONTACT ME</a></p>
                 </ul>
             </div>
         </section>
@@ -206,6 +238,32 @@
             <section class="modal__content">
                 <div class="product_ttl">
                     <ruby class="product_ruby">サンプルサイト</ruby>
+                    <h2 class="product_name">COFFEE BREAK
+                        <div class="product_charge"> 
+                            DESIGN , CODING：SHUNSUKE NAKAGAWA
+                        </div>
+                    </h2>
+                    <span class="product_link_jump">URL | 
+                        <a href="https://mimiojisan.github.io/coffee-break/" target="_blank" class="product_link_jump_link">COFFEE BREAK</a>
+                    </span>
+                </div>
+                <div class="productTop">
+                    <img src="img/coffee.png" alt="work-picture">
+                </div>  
+                <li class="product_info">
+                    <h3 class="product_info_ttl">デザインについて</h3>
+                    <p class="product_info_txt">スプリットスクリーンレイアウトを採用し、画面全体を使って動きのあるデザインにしました。ECサイトのトップページをイメージした設計で、画像を多用し、迷うことのない導線づくりを意識しました。Wordpressで実装しているため、スタッフブログを管理画面から追加することができます。</p>
+                </li>
+                <div class="product_days">
+                    制作期間：3日間
+                </div>
+            </section>    
+        </div> 
+        <div id="modal03" class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <section class="modal__content">
+                <div class="product_ttl">
+                    <ruby class="product_ruby">サンプルサイト</ruby>
                     <h2 class="product_name">RENTH STUDIO
                         <div class="product_charge"> 
                             DESIGN , CODING：SHUNSUKE NAKAGAWA
@@ -227,7 +285,7 @@
                 </div>
             </section>    
         </div> 
-        <div id="modal03" class="modal js-modal">
+        <div id="modal04" class="modal js-modal">
             <div class="modal__bg js-modal-close"></div>
             <section class="modal__content">
                 <div class="product_ttl">
@@ -253,7 +311,34 @@
                 </div>
             </section>    
         </div>     
-        <div id="modal04" class="modal js-modal">
+        <div id="modal05" class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <section class="modal__content">
+                <div class="product_ttl">
+                    <ruby class="product_ruby">映画検索アプリ</ruby>
+                    <h2 class="product_name">CINEMA VUE.
+                        <div class="product_charge"> 
+                            DESIGN , CODING：SHUNSUKE NAKAGAWA
+                        </div>
+                    </h2>
+                    <span class="product_link_jump">URL | 
+                        <a href="https://mimiojisan.github.io/cinemaVue/" target="_blank" class="product_link_jump_link">CINEMA VUE.</a>
+                    </span>
+                </div>
+                <div class="productTop">
+                    <img src="img/cinema.png" alt="work-picture">
+                </div>  
+                <li class="product_info">
+                    <h3 class="product_info_ttl">デザインについて</h3>
+                    <p class="product_info_txt">なんの映画か一目でわかるようにポスターを大きく表示しました。キーワード・タグ検索で映画を検索できます。映画を選択すると、概要・出演者・関連作品が表示されます。
+                    </p>
+                </li>
+                <div class="product_days">
+                    制作期間：1週間
+                </div>
+            </section>    
+        </div> 
+        <div id="modal06" class="modal js-modal">
             <div class="modal__bg js-modal-close"></div>
             <section class="modal__content">
                 <div class="product_ttl">
@@ -279,7 +364,7 @@
                 </div>
             </section>    
         </div> 
-        <div id="modal05" class="modal js-modal">
+        <div id="modal07" class="modal js-modal">
             <div class="modal__bg js-modal-close"></div>
             <section class="modal__content">
                 <div class="product_ttl">
@@ -311,11 +396,10 @@
     <!-- footer start -->
     <!-- 共通フッダー -->
     <footer id="footer">
-        <p class="copyright">© 2022 | SHUNSUKE NAKAGAWA All Rights Reserved.</p>
+        <p class="copyright">© 2022 | SHUNSUKE NAKAGAWA</p>
     </footer>
         
     <!-- js -->
-    <script src="js/theme.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
 

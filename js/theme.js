@@ -1,52 +1,100 @@
-/*=================================================*/
-/*宣言*/
-/*=================================================*/
 
-const $size = window.innerWidth;
-const $break = 960;
-
-if($size > $break) {
-function FixedAnime() {
-	var elemTop = $('#works').offset().top;
-	var scroll = $(window).scrollTop();
-
-	if(scroll <= 20){
-		$('#header').addClass('DownMove');
-		$('#header').removeClass('bg-color');
-	} else if (scroll >= elemTop){
-			$('#header').removeClass('UpMove');
-			$('#header').addClass('DownMove');
-			$('#header').addClass('bg-color');
-
-		}else{
-			if($('#header').hasClass('DownMove')){
-				$('#header').removeClass('DownMove');
-				$('#header').addClass('UpMove');
-			}
-		}
-}
-
-$(window).scroll(function () {
-	FixedAnime();
-});
-}
-
-  // 各コンテンツをふわっと表示させるJS 
-window.onload = function() {
-	scroll_effect();
+//   // 各コンテンツをふわっと表示させるJS 
+// window.onload = function() {
+// 	scroll_effect();
   
-	$(window).scroll(function(){
-	  scroll_effect();
-	});
+// 	$(window).scroll(function(){
+// 	  scroll_effect();
+// 	});
   
-	function scroll_effect(){
+// 	function scroll_effect(){
+// 	  $('.effect-fade').each(function(){
+// 		var elemPos = $(this).offset().top;
+// 		var scroll = $(window).scrollTop();
+// 		var windowHeight = $(window).height();
+// 		if (scroll > elemPos - windowHeight){
+// 		  $(this).addClass('effect-scroll');
+// 		}
+// 	  });
+// 	}
+// };
+
+function fadeAnime(){
+
 	  $('.effect-fade').each(function(){
-		var elemPos = $(this).offset().top;
+		var elemPos = $(this).offset().top-50;
 		var scroll = $(window).scrollTop();
 		var windowHeight = $(window).height();
 		if (scroll > elemPos - windowHeight){
 		  $(this).addClass('effect-scroll');
-		}
+        }else{
+          $(this).removeClass('effect-scroll');
+
+        }
 	  });
-	}
-  };
+
+    $('.p-left').each(function(){ 
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+            $(this).addClass('slide-in-right');
+        }else{
+            $(this).removeClass('slide-in-right');
+
+        }
+    });
+
+    $('.p-right').each(function(){ 
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+            $(this).addClass('slide-in-left');
+        }else{
+            $(this).removeClass('slide-in-left');
+
+        }
+    });
+    
+    $('.p-center').each(function(){ 
+        var elemPos = $(this).offset().top-50;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+            $(this).addClass('bounce-in-top');
+        }else{
+            $(this).removeClass('bounce-in-top');
+
+        }
+    });
+
+	$('.bg-box').each(function(){
+		var elemPos = $(this).offset().top-50;
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll > elemPos - windowHeight){
+		  $(this).addClass('fade-in');
+        }else{
+          $(this).removeClass('fade-in');
+
+        }
+	  });
+
+	  $('.grid').each(function(){
+		var elemPos = $(this).offset().top-50;
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll > elemPos - windowHeight){
+		  $(this).addClass('fade-in');
+        }else{
+          $(this).removeClass('fade-in');
+
+        }
+	  });
+
+};
+
+$(window).scroll(function (){
+    fadeAnime();
+});
